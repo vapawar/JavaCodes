@@ -1,4 +1,4 @@
-package org.vpz.webs.jersey;
+package jersey;
 
 import java.util.ArrayList;
 import javax.ws.rs.Consumes;

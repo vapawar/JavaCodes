@@ -1,4 +1,4 @@
-package org.vpz.webs.jersey;
+package jersey;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

@@ -1,4 +1,4 @@
-package org.vpz.webs.soaps;
+package soap;
 
 import java.net.MalformedURLException;
 import java.net.URL;

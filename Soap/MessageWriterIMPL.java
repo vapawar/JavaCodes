@@ -1,9 +1,9 @@
-package org.vpz.webs.soaps;
+package soap;
 
 import java.io.FileWriter;
 import javax.jws.WebService;
 
-import org.vpz.webs.soaps.MessageWriter;
+import soap.MessageWriter;
 
 @WebService(endpointInterface = "com.vpz.webs.MessageWriter")
 public class MessageWriterIMPL implements MessageWriter

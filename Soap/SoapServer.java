@@ -1,8 +1,8 @@
- package org.vpz.webs.soaps;
+ package soap;
 
 import javax.xml.ws.Endpoint;
 
-import org.vpz.webs.soaps.MessageWriterIMPL;
+import soap.MessageWriterIMPL;
 
 public class SoapServer 
 {

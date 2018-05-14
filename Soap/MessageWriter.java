@@ -1,4 +1,4 @@
-package org.vpz.webs.soaps;
+package soap;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
