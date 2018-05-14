@@ -1,4 +1,4 @@
-package org.vpz.test;
+package test;
 
 public class StaticTest
 {

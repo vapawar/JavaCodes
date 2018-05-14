@@ -1,4 +1,4 @@
-package org.vpz.test;
+package test;
 
 import java.util.ArrayList;
 import java.util.Collection;

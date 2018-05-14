@@ -1,4 +1,4 @@
-package org.vpz.test;
+package test;
 
 import javax.xml.bind.annotation.XmlElement;
 

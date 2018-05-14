@@ -1,4 +1,4 @@
-package org.vpz.test;
+package test;
 class MyException extends Exception
 {
     public MyException(String s)
