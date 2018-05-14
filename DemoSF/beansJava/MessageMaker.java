@@ -1,4 +1,4 @@
-package beasnSF2;
+package beansJava;
 
 public class MessageMaker 
 {

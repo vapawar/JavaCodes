@@ -1,4 +1,4 @@
-package beansSF;
+package beansXML;
 
 public class MessagerCodes 
 {
