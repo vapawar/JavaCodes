@@ -45,7 +45,7 @@ public class DatabaseApplication implements CommandLineRunner
 		data.add(c1);
 		data.add(c2);
 		logger.info("calling setData");
-		setData(data);
+		saveData(data);
 	}
 
 	public void getDetails()
@@ -70,7 +70,7 @@ public class DatabaseApplication implements CommandLineRunner
 		}).forEach(c -> logger.info(c.toString()));
 	}
 
-	public void setData(List<Customer> data)
+	public void saveData(List<Customer> data)
 	{
 		data.forEach(c -> {
 			jdbcTemplate.execute(

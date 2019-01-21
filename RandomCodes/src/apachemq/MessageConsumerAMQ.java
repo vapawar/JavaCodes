@@ -1,6 +1,7 @@
 package apachemq;
 
 import java.io.IOException;
+
 import javax.jms.Connection;
 import javax.jms.Destination;
 import javax.jms.JMSException;

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+    
+    <aop:config>
+	    <aop:aspect id="log" ref="logBean">
+		    <aop:pointcut id="selectAll" expression="execution(* com.vpz.beans.*.*(..))"/>
+		    <aop:before pointcut-ref="selectAll" method="beforeAdvice"/>
+		    <aop:after pointcut-ref="selectAll" method="afterAdvice"/>
+		    <aop:after-returning pointcut-ref="selectAll" returning="retval" method="afterReturningAdvice"/>
+		    <aop:after-throwing  pointcut-ref="selectAll" throwing="ex" method="afterThrowingAdvice"/>
+	    </aop:aspect>
+    </aop:config>
+    
+    <bean id="stBean" class="com.vpz.beans.Student">
+	    <property name="age" value="26"/>
+	    <property name="name" value="vinod"/>
+    </bean>
+    <bean id="logBean" class="com.vpz.beans.LoggingTest"/>
+    
+</beans>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id="cdBean" class="com.vpz.beans.JavaCollectionsDemo">
+   <property name="list">
+   <list>
+   <value>India</value>
+   <value>Nepal</value>
+   <value>USA</value>
+   <value>USA</value>
+   </list>
+   </property>
+   
+   <property name="set">
+   <set>
+   <value>India</value>
+   <value>Nepal</value>
+   <value>USA</value>
+   <value>USA</value>
+   </set>
+   </property>
+   
+   <property name="map">
+   <map>
+   <entry key="1" value="India"/>
+   <entry key="2" value="Nepal"/>
+   <entry key="3" value="USA"/>
+   <entry key="4" value="USA"/>
+   </map>
+   </property>
+   
+   <property name="props">
+   <props>
+   <prop key="1">India</prop>
+   <prop key="2">Nepal</prop>
+   <prop key="3">USA</prop>
+   <prop key="4">USA</prop>
+   </props>
+   
+   </property>
+   
+   </bean>
+
+</beans>
