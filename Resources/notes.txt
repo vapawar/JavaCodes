@@ -1,0 +1,19 @@
+to create jar
+->jar cf fname.jar *.class
+->jar cf fname.jar *.*
+
+
+to see jar content
+->jar tf fname.jar
+
+
+to extract jar
+->jar xf fname.jar
+
+A JDBC (Java Database Connectivity) program comprises the following steps:
+
+1.Allocate a Connection object, for connecting to the database.
+2.Allocate a Statement object, under the Connection object created.
+3.Write a SQL query and execute the query, via the Statement and Connection created.
+4.Process the query result.
+5.Close the Statement and Connection object to free up the resources.
