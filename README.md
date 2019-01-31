@@ -1,3 +1,3 @@
 # JavaCodes
-Java_Codes
+JavaCodes
 vpz ranodm Java code.
