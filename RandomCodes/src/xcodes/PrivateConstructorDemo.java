@@ -1,4 +1,4 @@
-package com.vpz.xcodes;
+package test;
 
 public class PrivateConstructorDemo 
 {
