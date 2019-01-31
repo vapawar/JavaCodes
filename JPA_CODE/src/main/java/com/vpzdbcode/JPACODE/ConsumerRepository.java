@@ -9,7 +9,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ConsumerRepository extends CrudRepository<Consumer, Integer>
 {
-
-	@Query("select cs from consumer cs")
-	List<Consumer> getData();
 }
