@@ -12,8 +12,6 @@ import org.springframework.stereotype.Service;
 public class ConsumerService
 {
 	@Autowired
-	DataSource dataSource;
-	@Autowired
 	ConsumerRepository repository;
 
 	@Transactional
