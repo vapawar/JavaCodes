@@ -6,18 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
-@Configuration
 @SpringBootApplication
-public class EntityManagerDemo implements CommandLineRunner {
-
-	@Autowired
-	private PlayerService playerService;
-
+public class EntityManagerDemo {
 	public static void main(String[] args) {
 		SpringApplication.run(EntityManagerDemo.class, args);
 	}
+}
+
+@Component
+class Demo implements CommandLineRunner {
+
+	@Autowired
+	private PlayerService playerService;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -36,7 +38,7 @@ public class EntityManagerDemo implements CommandLineRunner {
 		p2.setId(12345689);
 		p2.setName("Messi");
 		p2.setLocation("Europe");
-		
+
 		Player px = new Player();
 		px.setId(12342842);
 		px.setName("test");
