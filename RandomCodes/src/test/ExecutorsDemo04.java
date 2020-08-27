@@ -12,31 +12,31 @@ import java.util.concurrent.Future;
 
 public class ExecutorsDemo04 {
 
-	public static void main(String[] args) throws InterruptedException, ExecutionException {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-		ExecutorService service = Executors.newFixedThreadPool(4);
-		Set<Callablez> set = new HashSet<>();
-		Callablez c1 = new Callablez();
-		Callablez c2 = new Callablez();
-		Callablez c6 = new Callablez();
-		Callablez c8 = new Callablez();
-		set.add(c1);
-		set.add(c2);
-		set.add(c6);
-		set.add(c8);
-		List<Future<String>> futures = service.invokeAll(set);
-		for (Future<String> future : futures) {
-			System.out.println(future.get());
-		}
-		service.shutdown();
-	}
+        ExecutorService service = Executors.newFixedThreadPool(4);
+        Set<Callablez> set = new HashSet<>();
+        Callablez c1 = new Callablez();
+        Callablez c2 = new Callablez();
+        Callablez c6 = new Callablez();
+        Callablez c8 = new Callablez();
+        set.add(c1);
+        set.add(c2);
+        set.add(c6);
+        set.add(c8);
+        List<Future<String>> futures = service.invokeAll(set);
+        for (Future<String> future : futures) {
+            System.out.println(future.get());
+        }
+        service.shutdown();
+    }
 }
 
 class Callablez implements Callable<String> {
-	String data = "Runner";
+    String data = "Runner";
 
-	@Override
-	public String call() throws Exception {
-		return data + " :: " + (new Random().nextInt());
-	}
+    @Override
+    public String call() throws Exception {
+        return data + " :: " + (new Random().nextInt());
+    }
 }

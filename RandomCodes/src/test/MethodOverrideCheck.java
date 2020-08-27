@@ -1,25 +1,20 @@
 package test;
 
-public class MethodOverrideCheck
-{
+public class MethodOverrideCheck {
 
-	public static void main(String[] args)
-	{
-		foo(null);
-	}
+    public static void main(String[] args) {
+        foo(null);
+    }
 
-	private static void foo(Object object)
-	{
-		System.out.println("root");
-	}
+    private static void foo(Object object) {
+        System.out.println("root");
+    }
 
-	private static void foo(String str)
-	{
-		System.out.println("str");
-	}
+    private static void foo(String str) {
+        System.out.println("str");
+    }
 
-	public static void foo(int a)
-	{
-		System.out.println("primitive");
-	}
+    public static void foo(int a) {
+        System.out.println("primitive");
+    }
 }

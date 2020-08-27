@@ -2,47 +2,46 @@ package test;
 
 public class Student {
 
-	String name;
-	String surname;
-	int id;
-	
-	public Student()
-	{
-	}
+    String name;
+    String surname;
+    int id;
 
-	public Student(int id, String name) {
-		this.id = id;
-		this.name = name;
-	}
+    public Student() {
+    }
 
-	public int getId() {
-		return id;
-	}
+    public Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getSurname() {
-		return surname;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setSurname(String surname) {
-		this.surname = surname;
-	}
+    public String getSurname() {
+        return surname;
+    }
 
-	@Override
-	public boolean equals(Object s1) {
-		Student s = (Student) s1;
-		return this.getName().equals(s.getName()) && this.getSurname().equals(s.getSurname());
-	}
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    @Override
+    public boolean equals(Object s1) {
+        Student s = (Student) s1;
+        return this.getName().equals(s.getName()) && this.getSurname().equals(s.getSurname());
+    }
 
 }

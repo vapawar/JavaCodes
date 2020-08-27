@@ -1,47 +1,38 @@
+package DBMS;
+
 import java.io.BufferedReader;
- import java.io.FileReader;
- import java.util.StringTokenizer;
+import java.io.FileReader;
+import java.io.IOException;
 
- public class ReadCSVFile 
- {
+public class ReadCSV {
+    public static void main(String[] args) throws Exception {
+        String splitBy = ",";
+        BufferedReader br = new BufferedReader(new FileReader("test.csv"));
+        String line = null;
+        while ((line = br.readLine()) != null) {
+            String[] b = line.split(splitBy);
+            System.out.println(b[0]);
+        }
+        br.close();
+    }
+}
 
-   public static void main(String[] args) {
-
-     try { 
-			
-       String csvFile = "C:\\SampleCSV.csv";
-
-       //create BufferedReader to read csv file
-       BufferedReader br = new BufferedReader(new FileReader(csvFile));
-       String line = "";
-       StringTokenizer st = null;
-
-       int lineNumber = 0; 
-       int tokenNumber = 0;
-
-       //read comma separated file line by line
-       while ((line = br.readLine()) != null) {
-         lineNumber++;
-
-         //use comma as token separator
-         st = new StringTokenizer(line, ",");
-
-         while (st.hasMoreTokens()) {
-           tokenNumber++;
-
-           //display csv values
-           System.out.print(st.nextToken() + "  ");
-         }
-
-         System.out.println();
-
-         //reset token number
-         tokenNumber = 0;
-       }
-
-     } catch (Exception e) {
-       System.err.println("CSV file cannot be read : " + e);
-     }
-   }
-
- }
+class ReadCSV2 {
+    public void readCsvData(String fname) throws IOException {
+        BufferedReader br = null;
+        String line = "";
+        String cvsSeperator = ",";
+        try {
+            br = new BufferedReader(new FileReader(fname));
+            while ((line = br.readLine()) != null) {
+                String[] cvsData = line.split(cvsSeperator);
+                System.out.println(cvsData[0] + "   " + cvsData[1] + "   " + cvsData[2]);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (br != null)
+                br.close();
+        }
+    }
+}
