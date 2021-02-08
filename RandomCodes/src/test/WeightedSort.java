@@ -30,8 +30,7 @@ public class WeightedSort {
             }
         }
 
-        LinkedHashSet<Integer> dt = new LinkedHashSet<>();
-        Arrays.asList(data).forEach(x -> dt.add(x));
-        dt.forEach(x -> System.out.print(x + ":" + hmap.get(x) + "    "));
+        LinkedHashSet<Integer> dt = new LinkedHashSet<>(Arrays.asList(data));
+        dt.forEach(x -> System.out.print(x + ":" + map.get(x) + "  "));
     }
 }
